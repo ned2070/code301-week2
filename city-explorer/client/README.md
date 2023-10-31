@@ -21,6 +21,9 @@
 30-10-2023 14:00 GET problem resolved, city found and latittude and longitude displayed.
 30-10-2023 20:30 GET for map working, map displayed.
 
+31-10-2023 14:30 File system set up.
+31-10-2023 19:00 Server reading JSON file.
+
 ## Lab 06 30-10-2023
 
 Name of feature: Location
@@ -48,6 +51,28 @@ Name of feature: Error Messages
 Estimate of time needed to complete: 2 hrs
 
 Start time: 22:30
+
+Finish time:
+
+Actual time needed to complete:
+
+## Lab 07 31-10-2023
+
+Name of feature: Weather (Placeholder)
+
+Estimate of time needed to complete: 4 hrs
+
+Start time: 13:00
+
+Finish time:
+
+Actual time needed to complete:
+
+Name of feature: Error Messages
+
+Estimate of time needed to complete: 2 hrs
+
+Start time:
 
 Finish time:
 
