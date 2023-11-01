@@ -24,6 +24,9 @@
 31-10-2023 14:30 File system set up.
 31-10-2023 19:00 Server reading JSON file.
 
+01-11-2023 20:00 App showing JSON data.
+01-11-2023 21:30 Refactored with weather in a component.
+
 ## Lab 06 30-10-2023
 
 Name of feature: Location
@@ -64,9 +67,9 @@ Estimate of time needed to complete: 4 hrs
 
 Start time: 13:00
 
-Finish time:
+Finish time: 20:00 01-11-2023
 
-Actual time needed to complete:
+Actual time needed to complete: 7 hrs
 
 Name of feature: Error Messages
 
@@ -77,6 +80,16 @@ Start time:
 Finish time:
 
 Actual time needed to complete:
+
+## Lab 07 31-10-2023
+
+Name of feature: Weather (Live)
+
+Estimate of time needed to complete: 2 hrs
+
+Start time: 21:00 01-11-2023
+
+Finish time:
 
 ## Credit and Collaborations
 
