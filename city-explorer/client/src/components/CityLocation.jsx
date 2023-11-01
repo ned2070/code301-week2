@@ -1,9 +1,9 @@
-export default function CityLocation({ display_name, latitude, longitude }) {
+export default function CityLocation({ display_name, lat, lon }) {
   return (
     <div className="cityLocation">
       <p>{display_name}</p>
-      <p>Latitude: {latitude}</p>
-      <p>Longitude: {longitude}</p>
+      <p>Latitude: {lat}</p>
+      <p>Longitude: {lon}</p>
     </div>
   );
 }

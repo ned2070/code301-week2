@@ -13,7 +13,7 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 function App() {
   const [city, setCity] = useState({});
   const [search, setSearch] = useState("");
-  const [Weather, setWeather] = useState([]);
+  const [weather, setWeather] = useState([]);
 
   function handleChange(event) {
     setSearch(event.target.value);
@@ -25,17 +25,20 @@ function App() {
     const API = `https://eu1.locationiq.com/v1/search?q=${search}&key=${API_KEY}&format=json`;
     const res = await axios.get(API);
     setCity(res.data[0]);
+    getWeather(res.data[0]);
+  }
 
-    const API_weather = `http://localhost:8080/weather.json`;
-    const resw = await axios.get(API_weather);
-    setWeather(resw.data);
-    console.log(resw.data);
+  async function getWeather(tempLocation) {
+    const API = `http://localhost:8080/weather?&searchQuery=${search}`;
+
+    const res = await axios.get(API);
+    setWeather(res.data);
+    console.log(weather);
   }
 
   return (
     <div>
       <Header />
-
       <form onSubmit={getCity}>
         <label>
           {" "}
@@ -56,7 +59,15 @@ function App() {
         lat={city.lat}
         lon={city.lon}
       />
-      <CityWeather display_name={city.display_name} />
+      <h2>Weather</h2>
+      {weather.map((day) => {
+        return (
+          <p key={day.date}>
+            The weather on {day.date} is {day.description}
+          </p>
+        );
+      })}
+      ;
       <CityMap API_KEY={API_KEY} lat={city.lat} lon={city.lon} />
       <Footer />
     </div>
