@@ -1,9 +1,14 @@
-export default function CityWeather({ display_name }) {
+export default function CityWeather({ weather }) {
   return (
     <div className="cityWeather">
-      <div key={game.name} />
-      <h2>{game.name}</h2>
-      <h3>Year: {game.year}</h3>
+      <h2> Weather </h2>
+      {weather.map((day) => {
+        return (
+          <p key={day.date}>
+            The weather on {day.date} is {day.description}
+          </p>
+        );
+      })}
     </div>
   );
 }

@@ -33,7 +33,6 @@ function App() {
 
     const res = await axios.get(API);
     setWeather(res.data);
-    console.log(weather);
   }
 
   return (
@@ -43,6 +42,7 @@ function App() {
         <label>
           {" "}
           Enter the name of a city
+          <p></p>
           <input
             type="search"
             name="cityName"
@@ -59,15 +59,8 @@ function App() {
         lat={city.lat}
         lon={city.lon}
       />
-      <h2>Weather</h2>
-      {weather.map((day) => {
-        return (
-          <p key={day.date}>
-            The weather on {day.date} is {day.description}
-          </p>
-        );
-      })}
-      ;
+
+      <CityWeather weather={weather} />
       <CityMap API_KEY={API_KEY} lat={city.lat} lon={city.lon} />
       <Footer />
     </div>
