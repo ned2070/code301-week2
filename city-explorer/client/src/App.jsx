@@ -30,11 +30,12 @@ function App() {
     getWeather(res.data[0]);
   }
 
-  async function getWeather(tempLocation) {
-    const API_W = `http://localhost:8080/weather?&searchQuery=${search}`;
+  async function getWeather(city) {
+    const API_W = `http://localhost:8080/weather`;
 
-    const resW = await axios.get(API_W);
-    setWeather(resW.data);
+    //const res_W = await axios.get(API_W, { params: { city: "seattle" } });
+    await axios.get("http://localhost:8080/weather");
+    setWeather(res_W.data.weather);
   }
 
   return (

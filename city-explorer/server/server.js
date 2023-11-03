@@ -6,29 +6,11 @@ const app = express();
 app.use(cors());
 const axios = require("axios");
 
-// import our json data
-const data = require("./assets/weather.json");
-console.log(data);
-// add your endpoints here
-
-app.get("/", (request, response) => {
-  response.json("test");
-});
-
-app.get("/weather", (request, response) => {
-  const searchQuery = request.query.searchQuery;
-
-  const filteredCity = data.find((city) => {
-    return city.city_name === searchQuery;
-  });
-
-  const wrangledData = filteredCity.data.map((day) => {
-    return {
-      description: day.weather.description,
-      date: day.datetime,
-    };
-  });
-  response.json(wrangledData);
+app.get("/weather", async (request, response) => {
+  city = "Seattle";
+  const API_W = `https://api.weatherbit.io/v2.0/current?city="${city}&key=${process.env.VITE_API_KEY_W}`;
+  const res_W = await axios.get(API_W);
+  console.log(res_W.data);
 });
 
 app.listen(PORT, () => console.log(`App is running PORT ${PORT}`));
