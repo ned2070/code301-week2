@@ -4,10 +4,11 @@ require("dotenv").config();
 const PORT = process.env.PORT || 8080;
 const app = express();
 app.use(cors());
+const axios = require("axios");
 
 // import our json data
 const data = require("./assets/weather.json");
-
+console.log(data);
 // add your endpoints here
 
 app.get("/", (request, response) => {

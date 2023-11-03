@@ -9,6 +9,8 @@ import CityMap from "./components/CityMap";
 import CityWeather from "./components/CityWeather";
 
 const API_KEY = import.meta.env.VITE_API_KEY;
+// import weatherbit key
+const API_KEY_W = import.meta.env.VITE_API_KEY_W;
 
 function App() {
   const [city, setCity] = useState({});
@@ -29,10 +31,10 @@ function App() {
   }
 
   async function getWeather(tempLocation) {
-    const API = `http://localhost:8080/weather?&searchQuery=${search}`;
+    const API_W = `http://localhost:8080/weather?&searchQuery=${search}`;
 
-    const res = await axios.get(API);
-    setWeather(res.data);
+    const resW = await axios.get(API_W);
+    setWeather(resW.data);
   }
 
   return (
