@@ -25,7 +25,10 @@
 31-10-2023 19:00 Server reading JSON file.
 
 01-11-2023 20:00 App showing JSON data.
-01-11-2023 21:30 Refactored with weather in a component.
+01-11-2023 21:30 Refactored with weather in a
+component.
+02-11-2023 23:00 Deployed to Vercel and Render but not working online.
+03-11-2023 12:30 Server reading Weatherbit API
 
 ## Lab 06 30-10-2023
 
