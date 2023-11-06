@@ -12,10 +12,6 @@
 
 ## Change Log
 
-<!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
-
-01-01-2001 4:59pm - Application now has a fully-functional express server, with a GET route for the location resource. -->
-
 30-10-2023 14:00 Application accepts user input and transfers props to children.
 30-10-2023 15:45 Application file structure complete but GET not working.
 30-10-2023 14:00 GET problem resolved, city found and latittude and longitude displayed.
@@ -29,6 +25,8 @@
 component.
 02-11-2023 23:00 Deployed to Vercel and Render but not working online.
 03-11-2023 12:30 Server reading Weatherbit API
+04-11-2023 15:30 Server receiving query from client
+05-11-2023 22:00 Server reading Weatherbit API
 
 ## Lab 06 30-10-2023
 
