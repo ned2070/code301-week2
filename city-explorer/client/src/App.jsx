@@ -33,9 +33,11 @@ function App() {
   async function getWeather(city) {
     const API_W = `http://localhost:8080/weather`;
 
-    //const res_W = await axios.get(API_W, { params: { city: "seattle" } });
-    await axios.get("http://localhost:8080/weather");
-    setWeather(res_W.data.weather);
+    const res_W = await axios.get(API_W, { params: { city: search } });
+
+    setWeather(res_W).data;
+    console.log(res_W);
+    console.log(weather);
   }
 
   return (
